@@ -1,0 +1,32 @@
+{
+	"hackney": {
+		"gss_code": "E09000012",
+		"name": "London Borough of Hackney",
+		"scraper": "northgate",
+		"base_url": "http://apps.hackney.gov.uk/servapps/Northgate/PlanningExplorer"
+	},
+	"lambeth": {
+		"name": "Lambeth",
+		"gss_code": "E09000022",
+		"scraper": "idox",
+		"base_url": "http://planning.lambeth.gov.uk/online-applications"
+	},
+	"th": {
+		"name": "Tower Hamlets",
+		"gss_code": "E09000030",
+		"scraper": "wam",
+		"base_url": "http://planreg.towerhamlets.gov.uk/WAM"
+	},
+	"nn": {
+		"name": "Northampton",
+		"gss_code": "E07000154",
+		"scraper": "civica",
+		"base_url": "http://planning.northamptonboroughcouncil.com"
+	},
+	"brent": {
+		"name": "Brent",
+		"gss_code": "E09000005",
+		"scraper": "brent",
+		"base_url": "https://forms.brent.gov.uk/servlet"
+	}
+}

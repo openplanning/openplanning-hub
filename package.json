@@ -1,0 +1,24 @@
+{
+  "name": "planning-scraper",
+  "version": "0.1.0",
+  "description": "An planning applications scraper",
+  "repository": "https://github.com/andyuk/landtech-tools",
+  "main": "scraper.js",
+  "dependencies": {
+    "async": "^0.9.0",
+    "cheerio": "^0.17.0",
+    "moment": "2.7.0",
+    "mongoose": "3.8.13",
+    "mongoose-unique-validator": "0.3.0",
+    "nomnom": "1.8.0",
+    "request": "2.39.0",
+    "underscore": "^1.6.0",
+    "winston": "^0.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

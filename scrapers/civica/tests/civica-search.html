@@ -1,0 +1,609 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:clay="http://shale.apache.org/clay" xmlns:w2="http://www.comino.com/jsftags"><head>
+<link rel="stylesheet" href="/Planning/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/14056774/calendar.HtmlCalendarRenderer/WH/theme.css" type="text/css">
+<link rel="stylesheet" href="/Planning/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/14056774/calendar.HtmlCalendarRenderer/DB/theme.css" type="text/css">
+<script type="text/javascript" src="/Planning/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/14056774/prototype.PrototypeResourceLoader/prototype.js"><!--
+
+//--></script>
+<script type="text/javascript" src="/Planning/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/14056774/calendar.HtmlCalendarRenderer/date.js"><!--
+
+//--></script>
+<script type="text/javascript" src="/Planning/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/14056774/calendar.HtmlCalendarRenderer/popcalendar.js"><!--
+
+//--></script>
+<script type="text/javascript" src="/Planning/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/14056774/inputTextHelp.HtmlTextHelpRenderer/inputTextHelp.js"><!--
+
+//--></script>
+
+
+    <link rel="stylesheet" type="text/css" href="http://planning.northamptonboroughcouncil.com/Planning/css/nbc-new/base.css" media="screen">
+<!--[if lte IE 6]>
+	<link rel="stylesheet" type="text/css" href="http://www.northampton.gov.uk/site/styles/generic/ie_special.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="http://www.northampton.gov.uk/site/styles/generic/ie_special_print.css" media="print" />
+<![endif]-->
+<!--[if IE 7]>
+ <link rel="stylesheet" type="text/css" href="="http://planning.northamptonboroughcouncil.com/Planning/css/nbc-new/ie-seven.css" media="screen" />
+<![endif]-->		
+<link rel="stylesheet" type="text/css" href="=" http:="" planning.northamptonboroughcouncil.com="" planning="" css="" nbc-new="" print.css"="" media="print">
+<link rel="stylesheet" type="text/css" href="=" http:="" planning.northamptonboroughcouncil.com="" planning="" css="" nbc-new="" handheld.css"="" media="handheld">
+<link rel="Shortcut Icon" type="image/x-icon" href="http://www.northampton.gov.uk/site/favicon.ico">
+<link rel="stylesheet" type="text/css" href="http://planning.northamptonboroughcouncil.com/Planning/css/nbc-new/db-nbc.css" media="screen">
+<link rel="ToC" href="http://www.northampton.gov.uk/site/scripts/site_map.php">
+
+    
+    <script type="text/javascript" src="/Planning/js/rss.js"><!--
+
+//--></script>
+    <script type="text/javascript" src="/Planning/js/drag_drop.js"><!--
+
+//--></script>
+    <script type="text/javascript" src="/Planning/js/w2.js"><!--
+
+//--></script>
+    <script type="text/javascript"><!--
+var w2HelperObject_hm=new Object();
+w2HelperObject_hm['context']='/Planning';
+var w2HelperObject=w2HelperObject_hm;
+
+//--></script>
+    <link rel="stylesheet" type="text/css" href="/Planning/custom/css/northampton/generalV2.css">
+    <link rel="stylesheet" type="text/css" href="/Planning/css/menuV2NoScript.css">
+    
+    
+    
+    <title>Planning Search</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="author" content="Civica PLC">
+    <meta name="description" content="This is the search page for planning applications">
+    <meta name="keywords" content="planning, property, planning applications, planning online, local authority, Civica Plc">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<div id="wrapper">
+<script type="text/javascript">
+<!--
+var str = '<STYLE TYPE="text/css">\n'+
+'#listMenu ul {PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none;display:none;}\n'+
+'</STYLE>'
+document.write(str);
+//-->
+</script><style type="text/css">
+#listMenu ul {PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none;display:none;}
+</style>
+<noscript>
+    Your browser does not support JavaScript! So the menus will all be fully expanded.
+</noscript>
+
+<!--
+
+  Logo and navigation bar
+
+  -->
+  
+  <div id="mast" class="red box-shadow">
+
+	<span class="h1"><a id="_id25" name="_id25" href="http://www.northampton.gov.uk"><span>Dev - Northampton Borough Council</span></a></span>
+	
+	<ul id="mast-nav">
+		<li class="font-size"><a id="_id28" name="_id28" href="http://www.northampton.gov.uk/accessibility/settings"><span>Accessibility</span></a></li>
+		<li><a id="_id31" name="_id31" href="#">Other languages</a></li>
+		<li class="last"><a id="_id34" name="_id34" href="http://www.northampton.gov.uk/contactthecouncil">Contact us</a></li>
+	</ul>
+	
+	<ul id="skip" class="hidden">
+		<li><a id="_id37" name="_id37" href="#content">Skip to content</a></li>
+		<li><a id="_id40" name="_id40" href="#column_nav">Skip to main navigation</a></li>
+	</ul>
+		
+	<form id="search" name="search" method="post" action="/Planning/lg/GFPlanningSearch.page" enctype="application/x-www-form-urlencoded">
+		<p><label for="search:SearchSite">Search for it...</label></p>
+		<div id="search-site">
+			<input id="search:q" name="search:q" type="text" value="" size="18" class="field">
+			<input id="search:_id50" name="search:_id50" type="submit" value=" " class="button">
+		</div>
+	<input type="hidden" name="search_SUBMIT" value="1"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="rO0ABXVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAAAN0AAI3NHB0ABkvbGcvR0ZQbGFubmluZ1NlYXJjaC5wYWdl"></form>
+	
+	<div class="clear"></div>
+	
+</div>
+
+
+<div id="main" class=" box-shadow">
+
+<div id="page">
+
+<div class="withWidth" id="content">
+			
+			
+
+
+ 
+ 	
+<div id="civicacontent">
+  
+	
+		<div class="bodycontent">
+			<div class="bodytitle">
+				<div><h1>Search for Planning Applications</h1></div>
+            </div>
+                <div class="errorMessageGroup">
+					<!-- Main Form Messages -->
+					<div></div>
+				</div>
+				<!--div jsfid="clay" clayJsfid="guidance" styleClass="guidanceClass" /-->
+					<!-- Main Form -->
+				<div xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:clay="http://shale.apache.org/clay" xmlns:s="http://shale.apache.org/core" xmlns:d="http://www.comino.com/jsftags" xmlns:w2="http://www.comino.com/jsftags">
+    <p></p>
+    <p> You can complete one or all of the boxes available below to begin your search. </p>
+    <p> Please do not use the back or forward buttons on your browser. Instead please use any provided 'back' option within the website form(s). If there is no 'back' option available please use the 'cancel' option, which will take you back to the previous page.</p>
+    <p> All dates should be entered in the following format (dd/mm/yyyy).</p>
+    <p> All application numbers should be entered as N/YEAR/XXXX. </p>
+    <form id="_id122" method="post" action="/Planning/lg/GFPlanningSearch.page" enctype="application/x-www-form-urlencoded" target=""><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="rO0ABXVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAAAN0AAI3NHB0ABkvbGcvR0ZQbGFubmluZ1NlYXJjaC5wYWdl"><!--clay:clay clayJsfid="setManagedBeanParam" managedBeanName="genericKeyObjectSearch" name="uk.co.civica.genericsearch.restrictsearchfields" value="SDescription,AText1,AText2,AText3,AText4,AText6,APicklist2,APicklist3,SText1,SText2,SDate1From,SDate1To,SText10,SDate3From,SDate3To" /--><script type="text/javascript"><!--
+
+
+	function oamSetHiddenInput(formname, name, value)
+	{
+		var form = document.forms[formname];
+		if(typeof form.elements[name]=='undefined')
+		{
+			var newInput = document.createElement('input');
+			newInput.setAttribute('type','hidden');
+			newInput.setAttribute('id',name);
+			newInput.setAttribute('name',name);
+			newInput.setAttribute('value',value);
+			form.appendChild(newInput);
+		}
+		else
+		{
+			form.elements[name].value=value;
+		}
+		
+	}
+	
+	
+	function oamClearHiddenInput(formname, name, value)
+	{
+		var form = document.forms[formname];
+		if(typeof form.elements[name]!='undefined')
+		{
+			form.elements[name].value=null;
+		}
+		
+	}
+	
+	function oamSubmitForm(formName, linkId, target, params)
+	{
+		
+		var clearFn = 'clearFormHiddenParams_'+formName.replace(/-/g, '\$:').replace(/:/g,'_');
+		if(typeof eval('window.'+clearFn)!='undefined')
+		{
+			eval('window.'+clearFn+'(formName)');
+		}
+		
+		var oldTarget = '';
+		if((typeof target!='undefined') && target != null)
+		{
+			oldTarget=document.forms[formName].target;
+			document.forms[formName].target=target;
+		}
+		if((typeof params!='undefined') && params != null)
+		{
+			for(var i=0; i<params.length; i++)
+			{
+				oamSetHiddenInput(formName,params[i][0], params[i][1]);
+			}
+			
+		}
+		
+		oamSetHiddenInput(formName,formName +':'+'_idcl',linkId);
+		
+		if(document.forms[formName].onsubmit)
+		{
+			var result=document.forms[formName].onsubmit();
+			if((typeof result=='undefined')||result)
+			{
+				document.forms[formName].submit();
+			}
+			
+		}
+		else 
+		{
+			document.forms[formName].submit();
+		}
+		if(oldTarget==null) oldTarget='';
+		document.forms[formName].target=oldTarget;
+		if((typeof params!='undefined') && params != null)
+		{
+			for(var i=0; i<params.length; i++)
+			{
+				oamClearHiddenInput(formName,params[i][0], params[i][1]);
+			}
+			
+		}
+		
+		oamClearHiddenInput(formName,formName +':'+'_idcl',linkId);return false;
+	}
+	
+
+//--></script><input id="_id122:_id162" name="_id122:_id162" type="submit" value="Search" onclick="__w2disableActions(this);;if(typeof window.clearFormHiddenParams__id122!='undefined'){clearFormHiddenParams__id122('_id122');}" onmousedown="this.className='standardbuttondown';" onmouseup="this.className='standardbuttonover';" onmouseover="this.className='standardbuttonover';" onmouseout="this.className='standardbutton';" onkeypress="if (event.keyCode==13) { __w2disableActions(this);}" onkeydown="this.className='standardbuttondown';" onkeyup="this.className='standardbuttonover';" class="standardbutton" onfocus="this.className='standardbuttonover';" onblur="this.className='standardbutton';"><input id="_id122:_id163" name="_id122:_id163" type="submit" value="Cancel" onclick="__w2disableActions(this);;if(typeof window.clearFormHiddenParams__id122!='undefined'){clearFormHiddenParams__id122('_id122');}" onmousedown="this.className='standardbuttondown';" onmouseup="this.className='standardbuttonover';" onmouseover="this.className='standardbuttonover';" onmouseout="this.className='standardbutton';" onkeypress="bCancel=true;if (event.keyCode==13) { __w2disableActions(this);}" onkeydown="this.className='standardbuttondown';" onkeyup="this.className='standardbuttonover';" class="standardbutton" onfocus="this.className='standardbuttonover';" onblur="this.className='standardbutton';"><input id="_id122:_id164" name="_id122:_id164" type="submit" value="Clear" onclick="__w2disableActions(this);;if(typeof window.clearFormHiddenParams__id122!='undefined'){clearFormHiddenParams__id122('_id122');}" onmousedown="this.className='standardbuttondown';" onmouseup="this.className='standardbuttonover';" onmouseover="this.className='standardbuttonover';" onmouseout="this.className='standardbutton';" onkeypress="if (event.keyCode==13) { __w2disableActions(this);}" onkeydown="this.className='standardbuttondown';" onkeyup="this.className='standardbuttonover';" class="standardbutton" onfocus="this.className='standardbuttonover';" onblur="this.className='standardbutton';"><hr><div class="searchform">
+		<div><label for="_id122:SDescription">Application Number</label><input id="_id122:SDescription" name="_id122:SDescription" type="text" value="" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat;"></div>
+		<div><label for="_id122:AText1">House Name/Number</label><input id="_id122:AText1" name="_id122:AText1" type="text" value=""></div>
+		<div><label for="_id122:AText2">Road</label><input id="_id122:AText2" name="_id122:AText2" type="text" value=""></div>
+		<div><label for="_id122:AText3">Village</label><input id="_id122:AText3" name="_id122:AText3" type="text" value=""></div>
+		<div><label for="_id122:AText4">Town</label><input id="_id122:AText4" name="_id122:AText4" type="text" value=""></div>
+		<div><label for="_id122:AText6">Postcode</label><input id="_id122:AText6" name="_id122:AText6" type="text" value=""></div>
+		<div><label for="_id122:APicklist2">Ward</label><select id="_id122:APicklist2" name="_id122:APicklist2" multiple="multiple" size="5">	<option value="ABIN">Abington</option>	<option value="BILL">Billing</option>	<option value="BOOT">Boothville</option>	<option value="BG">Boughton Green</option>	<option value="BS">Brookside</option>	<option value="CAST">Castle</option>	<option value="Castle">Castle</option>	<option value="DEL">Delapre &amp; Briar Hill</option>	<option value="EH">East Hunsbury</option>	<option value="EAST">Eastfield</option>	<option value="EB">Ecton Brook</option>	<option value="Harpole">Harpole</option>	<option value="HEAD">Headlands</option>	<option value="Headlands">Headlands</option>	<option value="KH">Kings Heath</option>	<option value="KINS">Kingsley</option>	<option value="KING">Kingsthorpe</option>	<option value="LUMB">Lumbertubs</option>	<option value="NV">Nene Valley</option>	<option value="ND">New Duston</option>	<option value="OB">Obelisk</option>	<option value="OD">Old Duston</option>	<option value="PK">Park</option>	<option value="PARK">Parklands</option>	<option value="Parklands">Parklands</option>	<option value="PHIP">Phippsville</option>	<option value="RF">Rectory Farm</option>	<option value="RIV">Riverside</option>	<option value="RUSH">Rushmills</option>	<option value="SEM">Semilong</option>	<option value="SPEN">Spencer</option>	<option value="SP">Spring Park</option>	<option value="STC">St Crispin</option>	<option value="St Crispin">St Crispins</option>	<option value="STD">St David</option>	<option value="STJ">St James</option>	<option value="SUN">Sunnyside</option>	<option value="TAL">Talavera</option>	<option value="THOR">Thorplands</option>	<option value="TRIN">Trinity</option>	<option value="UP">Upton</option>	<option value="WH">West Hunsbury</option>	<option value="WEST">Weston</option></select></div>
+		<div><label for="_id122:APicklist3">Parish</label><select id="_id122:APicklist3" name="_id122:APicklist3" multiple="multiple" size="5">	<option value="BILL">BILLING PARISH COUNCIL</option>	<option value="BOUG">BOUGHTON PARISH COUNCIL</option>	<option value="COWH">COGENHOE &amp; WHISTON PARISH COUNCIL</option>	<option value="COLL">COLLINGTREE PARISH COUNCIL</option>	<option value="DUST">DUSTON PARISH COUNCIL</option>	<option value="ECTO">ECTON PARISH COUNCIL</option>	<option value="GTHO">GREAT HOUGHTON PARISH COUNCIL</option>	<option value="HARD">HARDINGSTONE PARISH COUNCIL</option>	<option value="HARL">HARLESTONE PARISH COUNCIL</option>	<option value="HARP">HARPOLE PARISH COUNCIL</option>	<option value="HMPC">HUNSBURY MEADOWS PARISH COUNCIL</option>	<option value="KISL">KISLINGBURY PARISH COUNCIL</option>	<option value="MOUL">MOULTON PARISH COUNCIL</option>	<option value="ROTH">ROTHERSTHORPE PARISH COUNCIL</option>	<option value="Upton">UPTON</option>	<option value="UPTO">UPTON PARISH COUNCIL</option>	<option value="WHPC">WEST HUNSBURY PARISH COUNCIL</option>	<option value="WOOT">WOOTTON AND EAST HUNSBURY PARISH COUNCIL</option></select></div>
+		<div><label for="_id122:SText1">Applicant Name</label><input id="_id122:SText1" name="_id122:SText1" type="text" value=""></div>
+		<div><label for="_id122:SText2">Agent Name</label><input id="_id122:SText2" name="_id122:SText2" type="text" value=""></div>
+		<div><label for="_id122:SDate1From">Date From</label><input id="_id122:SDate1From" name="_id122:SDate1From" type="text" size="10" onfocus="nullselectText('dd/mm/yyyy', '_id122:SDate1From')" onclick="selectText('dd/mm/yyyy', '_id122:SDate1From')" value="dd/mm/yyyy"><span id="_id122:SDate1FromSpan"><div id="_id122:SDate1FromSpan_calendarDiv" class="jscalendar-DB-div-style" style="visibility: hidden;"><table style="width:250px;" class="jscalendar-DB-table-style"><tbody><tr class="jscalendar-DB-title-background-style"><td><table style="width:248px;"><tbody><tr><td class="jscalendar-DB-title-style"><span><span class="jscalendar-DB-title-control-normal-style">&nbsp;<img src="/Planning/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/14056774/calendar.HtmlCalendarRenderer/DB/left1.gif" width="10px" height="11px" style="border:0px;">&nbsp;&nbsp;</span><span class="jscalendar-DB-title-control-normal-style">&nbsp;<img src="/Planning/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/14056774/calendar.HtmlCalendarRenderer/DB/right1.gif" width="10px" height="11px" style="border:0px;">&nbsp;&nbsp;</span><span class="jscalendar-DB-title-control-normal-style"></span>&nbsp;<span class="jscalendar-DB-title-control-normal-style"></span>&nbsp;</span></td><td style="text-align:right;"><a href="#"><span></span></a></td></tr></tbody></table></td></tr><tr><td class="jscalendar-DB-body-style"><span></span></td></tr><tr class="jscalendar-DB-today-style"><td class="jscalendar-DB-today-lbl-style"><span>Today is <a class="jscalendar-DB-today-style" title="Go To Current Month" href="#">21/07/2014</a></span></td></tr></tbody></table></div><div id="_id122:SDate1FromSpan_selectMonthDiv" class="jscalendar-DB-div-style" style="visibility: hidden;"></div><div id="_id122:SDate1FromSpan_selectYearDiv" class="jscalendar-DB-div-style" style="visibility: hidden;"></div></span><script type="text/javascript"><!--
+_5Fid122_3ASDate1FromCalendarVar=new org_apache_myfaces_PopupCalendar();
+_5Fid122_3ASDate1FromCalendarVar.initData.themePrefix = "jscalendar-DB";
+_5Fid122_3ASDate1FromCalendarVar.initData.imgDir = "/Planning/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/14056774/calendar.HtmlCalendarRenderer/DB/";
+_5Fid122_3ASDate1FromCalendarVar.initData.monthName = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+_5Fid122_3ASDate1FromCalendarVar.initData.dayName = new Array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+_5Fid122_3ASDate1FromCalendarVar.initData.startAt = 0;
+_5Fid122_3ASDate1FromCalendarVar.dateFormatSymbols.weekdays = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+_5Fid122_3ASDate1FromCalendarVar.dateFormatSymbols.shortWeekdays = new Array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+_5Fid122_3ASDate1FromCalendarVar.dateFormatSymbols.shortMonths = new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
+_5Fid122_3ASDate1FromCalendarVar.dateFormatSymbols.months = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+_5Fid122_3ASDate1FromCalendarVar.dateFormatSymbols.eras = new Array("BC","AD");
+_5Fid122_3ASDate1FromCalendarVar.dateFormatSymbols.ampms = new Array("AM","PM");
+_5Fid122_3ASDate1FromCalendarVar.initData.todayDateFormat = "dd/MM/yyyy";
+_5Fid122_3ASDate1FromCalendarVar.initData.popupLeft = false;
+
+_5Fid122_3ASDate1FromCalendarVar.initData.selectMode = "day";
+_5Fid122_3ASDate1FromCalendarVar.init(document.getElementById('_id122:SDate1FromSpan'));
+
+//--></script><input type="button" onclick="_5Fid122_3ASDate1FromCalendarVar._popUpCalendar(this,document.getElementById('_id122:SDate1From'),'dd/MM/yyyy')" value=">>"></div>
+		<div><label for="_id122:SDate1To">Date To</label><input id="_id122:SDate1To" name="_id122:SDate1To" type="text" size="10" onfocus="nullselectText('dd/mm/yyyy', '_id122:SDate1To')" onclick="selectText('dd/mm/yyyy', '_id122:SDate1To')" value="dd/mm/yyyy"><span id="_id122:SDate1ToSpan"><div id="_id122:SDate1ToSpan_calendarDiv" class="jscalendar-DB-div-style" style="visibility: hidden;"><table style="width:250px;" class="jscalendar-DB-table-style"><tbody><tr class="jscalendar-DB-title-background-style"><td><table style="width:248px;"><tbody><tr><td class="jscalendar-DB-title-style"><span><span class="jscalendar-DB-title-control-normal-style">&nbsp;<img src="/Planning/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/14056774/calendar.HtmlCalendarRenderer/DB/left1.gif" width="10px" height="11px" style="border:0px;">&nbsp;&nbsp;</span><span class="jscalendar-DB-title-control-normal-style">&nbsp;<img src="/Planning/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/14056774/calendar.HtmlCalendarRenderer/DB/right1.gif" width="10px" height="11px" style="border:0px;">&nbsp;&nbsp;</span><span class="jscalendar-DB-title-control-normal-style"></span>&nbsp;<span class="jscalendar-DB-title-control-normal-style"></span>&nbsp;</span></td><td style="text-align:right;"><a href="#"><span></span></a></td></tr></tbody></table></td></tr><tr><td class="jscalendar-DB-body-style"><span></span></td></tr><tr class="jscalendar-DB-today-style"><td class="jscalendar-DB-today-lbl-style"><span>Today is <a class="jscalendar-DB-today-style" title="Go To Current Month" href="#">21/07/2014</a></span></td></tr></tbody></table></div><div id="_id122:SDate1ToSpan_selectMonthDiv" class="jscalendar-DB-div-style" style="visibility: hidden;"></div><div id="_id122:SDate1ToSpan_selectYearDiv" class="jscalendar-DB-div-style" style="visibility: hidden;"></div></span><script type="text/javascript"><!--
+_5Fid122_3ASDate1ToCalendarVar=new org_apache_myfaces_PopupCalendar();
+_5Fid122_3ASDate1ToCalendarVar.initData.themePrefix = "jscalendar-DB";
+_5Fid122_3ASDate1ToCalendarVar.initData.imgDir = "/Planning/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/14056774/calendar.HtmlCalendarRenderer/DB/";
+_5Fid122_3ASDate1ToCalendarVar.initData.monthName = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+_5Fid122_3ASDate1ToCalendarVar.initData.dayName = new Array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+_5Fid122_3ASDate1ToCalendarVar.initData.startAt = 0;
+_5Fid122_3ASDate1ToCalendarVar.dateFormatSymbols.weekdays = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+_5Fid122_3ASDate1ToCalendarVar.dateFormatSymbols.shortWeekdays = new Array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+_5Fid122_3ASDate1ToCalendarVar.dateFormatSymbols.shortMonths = new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
+_5Fid122_3ASDate1ToCalendarVar.dateFormatSymbols.months = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+_5Fid122_3ASDate1ToCalendarVar.dateFormatSymbols.eras = new Array("BC","AD");
+_5Fid122_3ASDate1ToCalendarVar.dateFormatSymbols.ampms = new Array("AM","PM");
+_5Fid122_3ASDate1ToCalendarVar.initData.todayDateFormat = "dd/MM/yyyy";
+_5Fid122_3ASDate1ToCalendarVar.initData.popupLeft = false;
+
+_5Fid122_3ASDate1ToCalendarVar.initData.selectMode = "day";
+_5Fid122_3ASDate1ToCalendarVar.init(document.getElementById('_id122:SDate1ToSpan'));
+
+//--></script><input type="button" onclick="_5Fid122_3ASDate1ToCalendarVar._popUpCalendar(this,document.getElementById('_id122:SDate1To'),'dd/MM/yyyy')" value=">>"></div>
+		<div><label for="_id122:SText10">Proposal</label><input id="_id122:SText10" name="_id122:SText10" type="text" value=""></div>
+		<div><label for="_id122:SDate3From">Decision From</label><input id="_id122:SDate3From" name="_id122:SDate3From" type="text" size="10" onfocus="nullselectText('dd/mm/yyyy', '_id122:SDate3From')" onclick="selectText('dd/mm/yyyy', '_id122:SDate3From')" value="dd/mm/yyyy"><span id="_id122:SDate3FromSpan"><div id="_id122:SDate3FromSpan_calendarDiv" class="jscalendar-DB-div-style" style="visibility: hidden;"><table style="width:250px;" class="jscalendar-DB-table-style"><tbody><tr class="jscalendar-DB-title-background-style"><td><table style="width:248px;"><tbody><tr><td class="jscalendar-DB-title-style"><span><span class="jscalendar-DB-title-control-normal-style">&nbsp;<img src="/Planning/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/14056774/calendar.HtmlCalendarRenderer/DB/left1.gif" width="10px" height="11px" style="border:0px;">&nbsp;&nbsp;</span><span class="jscalendar-DB-title-control-normal-style">&nbsp;<img src="/Planning/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/14056774/calendar.HtmlCalendarRenderer/DB/right1.gif" width="10px" height="11px" style="border:0px;">&nbsp;&nbsp;</span><span class="jscalendar-DB-title-control-normal-style"></span>&nbsp;<span class="jscalendar-DB-title-control-normal-style"></span>&nbsp;</span></td><td style="text-align:right;"><a href="#"><span></span></a></td></tr></tbody></table></td></tr><tr><td class="jscalendar-DB-body-style"><span></span></td></tr><tr class="jscalendar-DB-today-style"><td class="jscalendar-DB-today-lbl-style"><span>Today is <a class="jscalendar-DB-today-style" title="Go To Current Month" href="#">21/07/2014</a></span></td></tr></tbody></table></div><div id="_id122:SDate3FromSpan_selectMonthDiv" class="jscalendar-DB-div-style" style="visibility: hidden;"></div><div id="_id122:SDate3FromSpan_selectYearDiv" class="jscalendar-DB-div-style" style="visibility: hidden;"></div></span><script type="text/javascript"><!--
+_5Fid122_3ASDate3FromCalendarVar=new org_apache_myfaces_PopupCalendar();
+_5Fid122_3ASDate3FromCalendarVar.initData.themePrefix = "jscalendar-DB";
+_5Fid122_3ASDate3FromCalendarVar.initData.imgDir = "/Planning/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/14056774/calendar.HtmlCalendarRenderer/DB/";
+_5Fid122_3ASDate3FromCalendarVar.initData.monthName = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+_5Fid122_3ASDate3FromCalendarVar.initData.dayName = new Array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+_5Fid122_3ASDate3FromCalendarVar.initData.startAt = 0;
+_5Fid122_3ASDate3FromCalendarVar.dateFormatSymbols.weekdays = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+_5Fid122_3ASDate3FromCalendarVar.dateFormatSymbols.shortWeekdays = new Array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+_5Fid122_3ASDate3FromCalendarVar.dateFormatSymbols.shortMonths = new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
+_5Fid122_3ASDate3FromCalendarVar.dateFormatSymbols.months = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+_5Fid122_3ASDate3FromCalendarVar.dateFormatSymbols.eras = new Array("BC","AD");
+_5Fid122_3ASDate3FromCalendarVar.dateFormatSymbols.ampms = new Array("AM","PM");
+_5Fid122_3ASDate3FromCalendarVar.initData.todayDateFormat = "dd/MM/yyyy";
+_5Fid122_3ASDate3FromCalendarVar.initData.popupLeft = false;
+
+_5Fid122_3ASDate3FromCalendarVar.initData.selectMode = "day";
+_5Fid122_3ASDate3FromCalendarVar.init(document.getElementById('_id122:SDate3FromSpan'));
+
+//--></script><input type="button" onclick="_5Fid122_3ASDate3FromCalendarVar._popUpCalendar(this,document.getElementById('_id122:SDate3From'),'dd/MM/yyyy')" value=">>"></div>
+		<div><label for="_id122:SDate3To">Decision To</label><input id="_id122:SDate3To" name="_id122:SDate3To" type="text" size="10" onfocus="nullselectText('dd/mm/yyyy', '_id122:SDate3To')" onclick="selectText('dd/mm/yyyy', '_id122:SDate3To')" value="dd/mm/yyyy"><span id="_id122:SDate3ToSpan"><div id="_id122:SDate3ToSpan_calendarDiv" class="jscalendar-DB-div-style" style="visibility: hidden;"><table style="width:250px;" class="jscalendar-DB-table-style"><tbody><tr class="jscalendar-DB-title-background-style"><td><table style="width:248px;"><tbody><tr><td class="jscalendar-DB-title-style"><span><span class="jscalendar-DB-title-control-normal-style">&nbsp;<img src="/Planning/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/14056774/calendar.HtmlCalendarRenderer/DB/left1.gif" width="10px" height="11px" style="border:0px;">&nbsp;&nbsp;</span><span class="jscalendar-DB-title-control-normal-style">&nbsp;<img src="/Planning/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/14056774/calendar.HtmlCalendarRenderer/DB/right1.gif" width="10px" height="11px" style="border:0px;">&nbsp;&nbsp;</span><span class="jscalendar-DB-title-control-normal-style"></span>&nbsp;<span class="jscalendar-DB-title-control-normal-style"></span>&nbsp;</span></td><td style="text-align:right;"><a href="#"><span></span></a></td></tr></tbody></table></td></tr><tr><td class="jscalendar-DB-body-style"><span></span></td></tr><tr class="jscalendar-DB-today-style"><td class="jscalendar-DB-today-lbl-style"><span>Today is <a class="jscalendar-DB-today-style" title="Go To Current Month" href="#">21/07/2014</a></span></td></tr></tbody></table></div><div id="_id122:SDate3ToSpan_selectMonthDiv" class="jscalendar-DB-div-style" style="visibility: hidden;"></div><div id="_id122:SDate3ToSpan_selectYearDiv" class="jscalendar-DB-div-style" style="visibility: hidden;"></div></span><script type="text/javascript"><!--
+_5Fid122_3ASDate3ToCalendarVar=new org_apache_myfaces_PopupCalendar();
+_5Fid122_3ASDate3ToCalendarVar.initData.themePrefix = "jscalendar-DB";
+_5Fid122_3ASDate3ToCalendarVar.initData.imgDir = "/Planning/faces/myFacesExtensionResource/org.apache.myfaces.renderkit.html.util.MyFacesResourceLoader/14056774/calendar.HtmlCalendarRenderer/DB/";
+_5Fid122_3ASDate3ToCalendarVar.initData.monthName = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+_5Fid122_3ASDate3ToCalendarVar.initData.dayName = new Array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+_5Fid122_3ASDate3ToCalendarVar.initData.startAt = 0;
+_5Fid122_3ASDate3ToCalendarVar.dateFormatSymbols.weekdays = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+_5Fid122_3ASDate3ToCalendarVar.dateFormatSymbols.shortWeekdays = new Array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+_5Fid122_3ASDate3ToCalendarVar.dateFormatSymbols.shortMonths = new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
+_5Fid122_3ASDate3ToCalendarVar.dateFormatSymbols.months = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+_5Fid122_3ASDate3ToCalendarVar.dateFormatSymbols.eras = new Array("BC","AD");
+_5Fid122_3ASDate3ToCalendarVar.dateFormatSymbols.ampms = new Array("AM","PM");
+_5Fid122_3ASDate3ToCalendarVar.initData.todayDateFormat = "dd/MM/yyyy";
+_5Fid122_3ASDate3ToCalendarVar.initData.popupLeft = false;
+
+_5Fid122_3ASDate3ToCalendarVar.initData.selectMode = "day";
+_5Fid122_3ASDate3ToCalendarVar.init(document.getElementById('_id122:SDate3ToSpan'));
+
+//--></script><input type="button" onclick="_5Fid122_3ASDate3ToCalendarVar._popUpCalendar(this,document.getElementById('_id122:SDate3To'),'dd/MM/yyyy')" value=">>"></div>
+	</div><!--clay:clay clayJsfid="genericKeyObjectSearch"/--><hr><input id="_id122:_id180" name="_id122:_id180" type="submit" value="Search" onclick="__w2disableActions(this);;if(typeof window.clearFormHiddenParams__id122!='undefined'){clearFormHiddenParams__id122('_id122');}" onmousedown="this.className='standardbuttondown';" onmouseup="this.className='standardbuttonover';" onmouseover="this.className='standardbuttonover';" onmouseout="this.className='standardbutton';" onkeypress="if (event.keyCode==13) { __w2disableActions(this);}" onkeydown="this.className='standardbuttondown';" onkeyup="this.className='standardbuttonover';" class="standardbutton" onfocus="this.className='standardbuttonover';" onblur="this.className='standardbutton';"><input id="_id122:_id181" name="_id122:_id181" type="submit" value="Cancel" onclick="__w2disableActions(this);;if(typeof window.clearFormHiddenParams__id122!='undefined'){clearFormHiddenParams__id122('_id122');}" onmousedown="this.className='standardbuttondown';" onmouseup="this.className='standardbuttonover';" onmouseover="this.className='standardbuttonover';" onmouseout="this.className='standardbutton';" onkeypress="bCancel=true;if (event.keyCode==13) { __w2disableActions(this);}" onkeydown="this.className='standardbuttondown';" onkeyup="this.className='standardbuttonover';" class="standardbutton" onfocus="this.className='standardbuttonover';" onblur="this.className='standardbutton';"><input id="_id122:_id182" name="_id122:_id182" type="submit" value="Clear" onclick="__w2disableActions(this);;if(typeof window.clearFormHiddenParams__id122!='undefined'){clearFormHiddenParams__id122('_id122');}" onmousedown="this.className='standardbuttondown';" onmouseup="this.className='standardbuttonover';" onmouseover="this.className='standardbuttonover';" onmouseout="this.className='standardbutton';" onkeypress="if (event.keyCode==13) { __w2disableActions(this);}" onkeydown="this.className='standardbuttondown';" onkeyup="this.className='standardbuttonover';" class="standardbutton" onfocus="this.className='standardbuttonover';" onblur="this.className='standardbutton';"><input type="hidden" name="_id122_SUBMIT" value="1"><input type="hidden" name="_id122:_idcl" value=""><input type="hidden" name="_id122:_link_hidden_" value=""><script type="text/javascript"><!--
+
+	function clear__5Fid122()
+	{
+		clearFormHiddenParams__id122('_id122');
+	}
+	
+	function clearFormHiddenParams__id122(currFormName)
+	{
+		var f = document.forms['_id122'];
+		f.elements['_id122:_idcl'].value='';
+		f.elements['_id122:_link_hidden_'].value='';
+		f.target='';
+	}
+	
+	clearFormHiddenParams__id122();
+//--></script></form>
+</div>
+		 </div>
+		 
+		 </div>
+		 </div>
+	
+ </div>
+ 
+ <div id="column_nav">
+
+<!-- ################ First nav widget -->
+<div id="side-nav">
+	<div class="clear"></div>
+	<!--<div id="top-tasks">
+		<h3 class="red"><a href="javascript:void(0);" class="expand"  onclick="return false">Top Tasks</a></h3>
+		<ul class="tasks">
+			<li><a href="http://www.northampton.gov.uk/payments">Make a payment</a></li>
+			<li><a href="http://www.northampton.gov.uk/info/200166/leisure_centres/1039/swimming_timetables">Find swimming pool timetables</a></li>
+			<li><a href="http://planning.northamptonboroughcouncil.com/Planning/lg/GFPlanningWelcome.page">View a planning application</a></li>
+			<li><a href="http://www.northampton.gov.uk/parking">Find out about parking</a></li>
+			<li><a href="http://www.northampton.gov.uk/whatson">Find out what&#039;s on</a></li>
+			<li><a href="http://www.northampton.gov.uk/recycling">Report a missed, lost or broken bin</a></li>
+			<li><a href="http://www.northampton.gov.uk/jobs">Find out about working for us</a></li>
+			<li><a href="http://www.northampton.gov.uk/museums">Discover our museum</a></li>
+			<li><a href="http://www.northampton.gov.uk/homepage/373/housing_allocations">Find out about applying for housing</a></li>
+			<li><a href="http://www.northampton.gov.uk/info/200028/council_tax/1349/eform-moving_address">Tell us about a change of address</a></li>		
+            </ul>
+	</div>-->
+
+	<div id="service-list">
+		<h3 class="red"><a id="_id59" name="_id59" href="http://north01.north.dev-l.hq.jadu.net/services">Service list</a></h3>
+		<ul>
+<li class="additional">
+				<a id="_id62" name="_id62" href="http://www.northampton.gov.uk/a_to_z">A - Z of services</a>
+			</li>
+			<li>
+				<a id="_id65" name="_id65" href="http://www.northampton.gov.uk/info/100002/advice_and_information_for_businesses">Advice and information for businesses</a>
+			</li>
+			<li>
+				<a id="_id68" name="_id68" href="http://www.northampton.gov.uk/info/200008/benefits">Benefits</a>
+			</li>
+			<li>
+				<a id="_id71" name="_id71" href="http://www.northampton.gov.uk/info/200028/council_tax">Council tax</a>
+			</li>
+			<li>
+				<a id="_id74" name="_id74" href="http://www.northampton.gov.uk/info/200040/environmental_health">Environmental health</a>
+			</li>
+			<li>
+				<a id="_id77" name="_id77" href="http://www.northampton.gov.uk/info/100007/housing">Housing</a>
+			</li>
+			<li>
+				<a id="_id80" name="_id80" href="http://www.northampton.gov.uk/info/100009/leisure_and_culture">Leisure and culture</a>
+			</li>
+			<li>
+				<a id="_id83" name="_id83" href="http://www.northampton.gov.uk/info/200074/planning">Planning</a>
+			</li>
+			<li>
+				<a id="_id86" name="_id86" href="http://www.northampton.gov.uk/info/200084/recycling_rubbish_and_waste">Recycling, rubbish and waste</a>
+			</li>
+			<li>
+				<a id="_id89" name="_id89" href="http://www.northampton.gov.uk/info/100004/your_council_elections_and_meetings">Your council, elections and meetings</a>
+			</li>
+			<li>
+				<a id="_id92" name="_id92" href="http://www.northampton.gov.uk/info/406/your_town">Your town</a>
+			</li>
+			<!--<li class="additional">
+				<a href="http://search.searchimprove.com/search.aspx?pckid=1610317951&amp;aid=471434&amp;sw">Search</a>
+			</li>-->
+		</ul>
+	</div>
+</div>
+</div>
+<div class="clear"></div></div><div id="ieFix"></div>
+<div id="footer" class="box-shadow clearfix">	
+<!-- START Socitm Code -->
+<!--<script type="text/javascript">
+    /* &lt;![CDATA[ */
+    var socitm_my_domains = "www.northampton.gov.uk";
+    var socitm_custcode = "263";
+    var socitm_intro_file = "http://www.northampton.gov.uk/site/includes/socitm_intro.php";
+    /* ]]&gt; */
+</script>
+<script src="/site/javascript/socitm_wrapper.js" type="text/javascript"></script><script src="/site/javascript/socitm_funct.js?code=263" type="text/javascript"></script><script src="http://socitm.govmetric.com/hitcounter.aspx?code=263" type="text/javascript"></script>-->
+<!-- END Socitm Code -->
+			
+		<ul>
+			<li><a id="_id95" name="_id95" href="http://www.northampton.gov.uk/site/scripts/terms.php">Terms &amp; disclaimer</a></li>
+			<li><a id="_id98" name="_id98" href="http://www.northampton.gov.uk/site/scripts/accessibility.php">Accessibility statement</a></li>
+			<li><a id="_id101" name="_id101" href="http://www.northampton.gov.uk/site/scripts/website_statistics.php">Website statistics</a></li>
+			<li><a id="_id104" name="_id104" href="http://www.northampton.gov.uk/site/scripts/site_map.php">Site map</a></li>
+		</ul>	
+	</div>
+
+<script type="text/javascript" language="Javascript1.1"><!--
+
+var bCancel = false;
+function validateForm(form) {
+	var bValid = true;
+	var sFormName = jcv_retrieveFormName(form);
+
+	return bValid;
+}
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to you under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+  /**
+   * This is a place holder for common utilities used across the javascript validation
+   *
+   */
+
+  /**
+   * Retreive the name of the form
+   * @param form The form validation is taking place on.
+   */
+  function jcv_retrieveFormName(form) {
+
+      // Please refer to Bugs 31534, 35127, 35294, 37315 & 38159
+      // for the history of the following code
+
+      var formName;
+
+      if (form.getAttributeNode) {
+          if (form.getAttributeNode("id") && form.getAttributeNode("id").value) {
+              formName = form.getAttributeNode("id").value;
+          } else {
+              formName = form.getAttributeNode("name").value;
+          }
+      } else if (form.getAttribute) {
+          if (form.getAttribute("id")) {
+              formName = form.getAttribute("id");
+          } else {
+              formName = form.attributes["name"];
+          }
+      } else {
+          if (form.id) {
+              formName = form.id;
+          } else {
+              formName = form.name;
+          }
+      }
+
+      re = /:/gi;
+      return formName.replace(re, "_");
+      
+  }  
+
+  /**
+   * Handle error messages.
+   * @param messages Array of error messages.
+   * @param focusField Field to set focus on.
+   */
+  function jcv_handleErrors(messages, focusField) {
+      if (focusField && focusField != null) {
+          var doFocus = true;
+          if (focusField.disabled || focusField.type == 'hidden') {
+              doFocus = false;
+          }
+          if (doFocus && 
+              focusField.style && 
+              focusField.style.visibility &&
+              focusField.style.visibility == 'hidden') {
+              doFocus = false;
+          }
+          if (doFocus) {
+              focusField.focus();
+          }
+      }
+      alert(messages.join('\n'));
+  }
+
+  /**
+   * Checks that the array element is a valid
+   * Commons Validator element and not one inserted by
+   * other JavaScript libraries (for example the
+   * prototype library inserts an "extends" into
+   * all objects, including Arrays).
+   * @param name The element name.
+   * @param value The element value.
+   */
+  function jcv_verifyArrayElement(name, element) {
+      if (element && element.length && element.length == 3) {
+          return true;
+      } else {
+          return false;
+      }
+  }
+
+  /**
+   * Checks whether the field is present on the form.
+   * @param field The form field.
+   */
+  function jcv_isFieldPresent(field) {
+      var fieldPresent = true;
+      if (field == null || field == undefined) {
+          fieldPresent = false;
+      } else {
+          if (field.disabled) {
+              fieldPresent = false;
+          }
+      }
+      return fieldPresent;
+  }
+
+  /**
+   * Check a value only contains valid numeric digits
+   * @param argvalue The value to check.
+   */
+  function jcv_isAllDigits(argvalue) {
+      argvalue = argvalue.toString();
+      var validChars = "0123456789";
+      var startFrom = 0;
+      if (argvalue.substring(0, 2) == "0x") {
+         validChars = "0123456789abcdefABCDEF";
+         startFrom = 2;
+      } else if (argvalue.charAt(0) == "0") {
+         validChars = "01234567";
+         startFrom = 1;
+      } else if (argvalue.charAt(0) == "-") {
+          startFrom = 1;
+      }
+
+      for (var n = startFrom; n < argvalue.length; n++) {
+          if (validChars.indexOf(argvalue.substring(n, n+1)) == -1) return false;
+      }
+      return true;
+  }
+
+  /**
+   * Check a value only contains valid decimal digits
+   * @param argvalue The value to check.
+   */
+  function jcv_isDecimalDigits(argvalue) {
+      argvalue = argvalue.toString();
+      var validChars = "0123456789";
+
+      var startFrom = 0;
+      if (argvalue.charAt(0) == "-") {
+          startFrom = 1;
+      }
+
+      for (var n = startFrom; n < argvalue.length; n++) {
+          if (validChars.indexOf(argvalue.substring(n, n+1)) == -1) return false;
+      }
+      return true;
+  }
+  
+  function trim(value) { return value.replace(/^\s+|\s+$/, ''); };
+
+
+
+//--></script>
+<script type="text/javascript">
+    /*w2dragdrop_CreateContainer(document.getElementById('DragContainer1'), document.getElementById('DragContainer2'), document.getElementById('DragContainer3'));*/
+    w2dragdrop_setCookieName('w2_webproto1settings');
+</script>
+</div>
+<!-- MYFACES JAVASCRIPT -->
+
+
+<script id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ d.innerText=i; } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }}catch(e){}</script></body></html>

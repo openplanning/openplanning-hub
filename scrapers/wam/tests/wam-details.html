@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<!-- #BeginEditable "doctitle" -->
+<title>Online planning register</title>
+<!-- #EndEditable -->
+
+<style type="text/css">
+abbr, acronym, span.abbr {cursor: help; border-bottom: 1px dashed #000;}
+</style>
+
+<link href="http://planreg.towerhamlets.gov.uk/WAMSkin//styles/towerhamlets/styles.css" type="text/css" rel="stylesheet" />
+<link href="http://planreg.towerhamlets.gov.uk/WAMSkin//styles/towerhamlets/system.css" type="text/css" rel="stylesheet" />
+
+<!-- Replace Tower Hamlets browser sniffing javascript with IE 6 + 7 conditional comments -->
+
+<!--[if IE 6]> 
+
+<style type="text/css">
+
+div {float:none;}
+
+html #logo {margin:0px 0px 0px 7px;}
+
+#menuBar {width:974px;height:45px;float:left;}
+
+#menu {margin:14px 0px 7px 9px;padding:0px 0px 0px 0px;}
+
+html #search {margin:-28px 10px 0px 0px;}      
+
+#search a {margin: 0px 0px 0px 0px;}  
+
+#search input { margin:0px 7px 0px 5px;} 
+  
+#advancedSearch  {margin:-22px 20px 0px 0px;height:22px;}   
+
+#align {margin:-2px 0px 0px 0px;}
+
+.label {margin:2px 3px 0px 3px;}
+ 
+#main {margin:-3px 0px 0px 0px;float:none;}
+
+.box .min {height:552px;}
+
+#largeBox {height:199px;}
+
+#sideMenuheader{padding:10px 0px 0px 20px;height:25px;}
+
+#rightMenuheader {height:25px;}
+
+#mainTextPage {height:540px;}   
+
+#mainTextColOne {height:548px;width:454px;}
+
+#BoxOne {width:366x;float:left;}
+
+.boxMainOne		{height:137px; }
+.boxMainOne span	{height:28px; }
+.boxMainOne .min	{height:137px; }
+         
+    
+#BoxTwo {width:366px;float:left;}
+
+.boxMainTwo		{height:137px; }
+.boxMainTwo span	{height:28px; }
+.boxMainTwo .min	{height:137px; }
+    
+#BoxThree {width:366px;float:left;}         
+
+.boxMainThree		{height:137px; }
+.boxMainThree span	{height:28px; }
+.boxMainThree .min	{height:137px; } 
+ 
+#BoxFour {width:366px;float:left;}  
+
+.boxMainFour		{height:137px; }
+.boxMainFour span	{height:28px; }
+.boxMainFour .min	{height:137px; } 
+ 
+#BoxOneRight {margin:62px 10px 0 0;} 
+   
+#BoxTwoRight {margin:18px 10px 0px 0px;} 
+   
+#BoxThreeRight {margin:18px 10px 0px 0px;} 
+   
+#BoxOneRightH {height:15px;}
+
+
+#BoxTwoRightH 	{height:15px;}				
+#BoxThreeRightH {height:15px;}	
+
+
+.boxMainOne span {height:28px;}	
+.boxMainOTwo span {height:28px;}
+.boxMainThree span {height:28px;}	
+.boxMainOFour span {height:28px;}
+.boxHeadspan{height:28px;}
+
+#footer {margin:0px 0px 0px 0px;}  
+#wrapper {display: inline-block;}
+
+.HomeHeader h1 {
+color:#666666;
+float:left;
+height:25px !important;
+margin:0 !important;
+padding:0px 0 0 0px !important;
+}
+
+#relatedlinksTranslations {
+font-size:100%;
+margin:10px 5px 0 24px;
+height:200px;
+width:60%;
+}
+
+@media print {
+	
+    /* 	Fix IE6/7 print preview bug
+    	Similar issue: http://www.stemkoski.com/soltution-for-the-internet-explorer-7-endless-printing-bug/
+	*/
+	div {float:left;}
+    
+    div#menuBar, div#left, div#footerLinks { display: none; }
+    #right { width: 100% }
+    #tabnav { display: none; }
+}
+
+</style>
+
+<![endif]-->
+
+<!--[if IE 7]> 
+
+<style type="text/css">
+
+div {float:none;}
+   
+#menuBar {min-height:15px;}
+
+#menu {margin:14px 0px 7px 9px;padding:0px 0px 0px 0px;}
+
+#advancedSearch {margin:-22px 20px 0px 0px;} 
+
+#search {margin:-26px 20px 0px 0px;}      
+    
+#search a {margin:0px 0px 0px 0px;float:right;}
+
+#search input {margin:0px 7px 0px 5px;} 
+
+#align	{ margin:-2px 0px 0px 0px; } 
+ 
+.label	{margin:2px 3px 0px 5px; }
+
+#main {float:none;}
+
+#BoxOneRightH 	{min-height:15px;}
+#BoxTwoRightH 	{min-height:15px;}				
+#BoxThreeRightH {min-height:15px;}	
+
+.boxMainOne span {min-height:28px;}	
+.boxMainOTwo span {min-height:28px;}
+.boxMainThree span {min-height:28px;}	
+.boxMainOFour span {min-height:28px;}
+
+.floatRight
+{
+float:right;
+width:210px;
+margin:0px 25px 0px 0px;
+}
+
+#footer {margin:0px 0px 0px 0px;}
+
+
+</style>
+
+<![endif]-->
+
+<link href="http://planreg.towerhamlets.gov.uk/WAMSkin//styles/main.css" rel="stylesheet" type="text/css" />
+<link href="http://planreg.towerhamlets.gov.uk/WAMSkin//styles/jsp.css" rel="stylesheet" type="text/css" />
+
+<link href="http://planreg.towerhamlets.gov.uk/WAMSkin//styles/towerhamlets/print.css" type="text/css" rel="stylesheet" media="print" />
+
+</head>
+
+<body>
+
+		<div id="all">  <!-- ******* all ******* -->
+			<div id="container"> <!-- ******* container ******* -->
+        		<div id="header">
+					<div id="banner"><h1><a href="http://www.towerhamlets.gov.uk/default.aspx" id="logo" title="Tower Hamlets"><span class="invisi">logo</span></a></h1><span class="invisi">[</span></div>
+
+			</div>
+			<div id="menuBar">
+				<div id="menu">
+					<ul class="nobullets">
+						<li class='noSep'><a href="http://www.towerhamlets.gov.uk/system_pages/top_navigation/a_to_z.aspx">A to Z</a></li>
+						<li><a href="http://www.towerhamlets.gov.uk/system_pages/top_navigation/online_services.aspx">Online Services</a></li>
+						<li><a href="http://www.towerhamlets.gov.uk/system_pages/top_navigation/news.aspx">News</a></li>
+
+						<li><a href="http://www.towerhamlets.gov.uk/system_pages/top_navigation/whats_on.aspx">What's on</a></li>
+						<li><a href="http://www.towerhamlets.gov.uk/system_pages/top_navigation/contacts.aspx">Contacts</a></li>
+						<li><a href="http://www.towerhamlets.gov.uk/system_pages/top_navigation/site_map.aspx">Site Map</a></li>
+					
+					</ul>
+					
+				</div>
+			   
+			</div>
+<!-- *******END OF TOP MENU******* -->
+<!-- *******MAIN CONTENT STARTS******* -->
+			<div id="main">
+				<div id="wrapper">
+                	<div id="left">
+                		<div id="sideMenuheader"><a href="http://www.towerhamlets.gov.uk/default.aspx">Council services</a> </div>
+							<div id="sidemenu" class="box"><div class="min">
+
+							  <div id="internalnavigation">
+									<ul>
+										<li><a href="http://www.towerhamlets.gov.uk/lgnl/environment_and_planning.aspx">Environment &amp; planning</a></li>
+									    <li><a href="http://www.towerhamlets.gov.uk/lgnl/environment_and_planning/land_and_premises.aspx">Land and premises</a></li>
+									    <li class="active">Proposals for land use</li>
+									</ul>
+
+									<span class="invisi">]</span>
+								</div>
+							  <div id="relatedlinks">
+								  <ul>
+									  <li><a href="http://planreg.towerhamlets.gov.uk/WAM/searchsubmit/performOption.do?action=search">Recent planning applications</a></li>
+								      <li><a href="http://planreg.towerhamlets.gov.uk/WAM/registered/myCaseFiles.do">View your saved cases</a></li>
+								      <li class="active"><a href="http://www.towerhamlets.gov.uk/lgsl/501-550/516_register_of_planning_decis/section_106_planning_obligatio.aspx">Section 106 planning obligations accounts</a></li>
+
+								      <li><a href="http://webforms.towerhamlets.gov.uk/AF3/an/default.aspx/RenderForm/?F.Name=i-39gntntza" target="_blank">Planning appeals submissions</a></li>
+								      <li><a href="http://modgov.towerhamlets.gov.uk/mgCommitteeDetails.asp?ID=312&amp;J=2?OpenForm&amp;RestrictToCategory=Development+Committee&amp;tip=committee">Development committee</a></li>
+								      <li><a href="http://modgov.towerhamlets.gov.uk/ieDocHome.asp?bcr=1?OpenForm&amp;tip=committee">Online committees &amp; panels</a></li>
+								      <li><a href="http://moderngov.towerhamlets.gov.uk/mgCalendarMonthView.aspx?GL=1&bcr=1">Forthcoming development committee meetings</a></li>
+								  </ul>
+							    </div>     
+								<span class="invisi">]</span>
+
+								</div>
+								<span class="footerSideLeftTop"></span>
+							</div>
+						</div>
+						<div id="right"> 
+                        	<div id="rightMenuheader">
+								<div id="bread"><a href="http://www.towerhamlets.gov.uk/default.aspx">Council services</a> &gt; <a href="http://www.towerhamlets.gov.uk/lgnl/environment_and_planning.aspx">Environment &amp; planning</a> &gt; Recent planning applications</div>
+
+					    </div>
+						<div id="BoxInternal" class="boxMainInternal">
+                        <div id="mainTextPage">
+						<!-- START WAM -->
+
+<h1><!-- #BeginEditable "pageheading" -->Case
+      File<!-- #EndEditable --></h1>
+
+<ul id="tabnav">
+<li><a href="http://planreg.towerhamlets.gov.uk/WAM/searchsubmit/performOption.do?action=search" class="navbarlink">Search 
+Applications</a></li>
+<li><a href="http://planreg.towerhamlets.gov.uk/WAM/registered/myCaseFiles.do" class="navbarlink">My Case 
+Files </a></li>
+<li><!-- #BeginEditable "loginlogout" -->
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+  
+
+  
+    
+    
+      
+    
+  
+
+  
+
+  
+    
+      <a href="/WAM/registered/mySubmissions.do" class="topbarlink">Login</a>
+    
+    
+  
+
+<!-- #EndEditable --></li>
+</ul>
+
+<span class="errortext"><!-- #BeginEditable "errormsg" -->
+
+
+
+<!-- #EndEditable --></span> <!-- #BeginEditable "pagehead" --><!-- #EndEditable --> 
+<!-- #BeginEditable "pagebody" -->
+<div></div>
+
+		       <!-- #BeginLibraryItem "/Library/casefilesummary.lbi" -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p id="comment"/>
+<table summary="Case File summary information" id="casefilesummary" cellpadding="3" cellspacing="1">
+<tr>
+<th id="apptype">Application Type:</th>
+<td colspan="3">Full Planning Permission</td>
+</tr>
+<tr>
+<th id="development">Development:</th>
+<td colspan="3">Installation of rooflights to rear roof slope and window to rear elevation to serve first floor rear bedroom in two storey dwelling.</td>
+</tr>
+<tr>
+<th id="location">Location:</th>
+<td id="locationbreak" colspan="3">Flat 1, Pavan Court, 114-116 Sceptre Road, London, E2 0JS</td>
+</tr>
+<tr>
+<th id="appno">Application No:</th>
+<td>PA/05/01754</td>
+<th id="regdate">Registration date:</th>
+<td>31 Oct 2005</td>
+</tr>
+<tr>
+<th id="parish">Ward:</th>
+<td>Bethnal Green</td>
+<th id="decdate">Decision date:</th>
+<td>09 Dec 2005</td>
+</tr>
+<tr>
+<th id="caseofficer">Case Officer:</th>
+<td>Gillian Nicks</td>
+<th id="dectype">Decision Type:</th>
+<td>Permit</td>
+</tr>
+<tr>
+<th id="applicant">Applicant:</th>
+<td>Mrs N. Gosling<br/>7 Meynell Road Hackney E9 7AP</td>
+<th id="agent">Agent:</th>
+<td>Mark Gregory Julian<br/>43 Groombridge Road London E9 7DP</td>
+</tr>
+<tr>
+<th id="dateconsultstart">Consultation started: (Registered date)</th>
+<td>31 Oct 2005</td>
+<th id="dateconsultend">Consultation End Date:</th>
+<td>21 Nov 2005</td>
+</tr>
+</table>
+
+<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/casefiledocs.lbi" -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table summary="Case File documents" id="casefiledocs" cellpadding="3" cellspacing="1">
+<tr>
+<th id="datepublished">Registration Date *</th><th id="doctype">Document Type</th><th id="view">View</th><th id="description">Description</th>
+</tr>
+<tr>
+<td class="row1">20 Dec 2005&nbsp;
+            </td><td class="row1">Application Form&nbsp;
+            </td><td class="row1"><a href="/WAM/doc/Application Form-189997.pdf?extension=.pdf&amp;id=189997&amp;location=Volume3&amp;appid=&amp;contentType=application/pdf&amp;pageCount=5">Whole Doc</a>
+                / <a href="/WAM/showCaseThumbnail.do;jsessionid=446E7F242B8958EF33ECFB3D0B9A9FDF?action=thumbnails&amp;appType=planning_register&amp;docid=189997">Thumbnails</a>
+                &nbsp;
+            </td><td class="row1"> &nbsp;
+            </td>
+</tr>
+<tr>
+<td class="row0">20 Dec 2005&nbsp;
+            </td><td class="row0">Decision Notice&nbsp;
+            </td><td class="row0"><a href="/WAM/doc/Decision Notice-189996.pdf?extension=.pdf&amp;id=189996&amp;location=Volume3&amp;appid=&amp;contentType=application/pdf&amp;pageCount=2">Whole Doc</a>
+                / <a href="/WAM/showCaseThumbnail.do;jsessionid=446E7F242B8958EF33ECFB3D0B9A9FDF?action=thumbnails&amp;appType=planning_register&amp;docid=189996">Thumbnails</a>
+                &nbsp;
+            </td><td class="row0">FULL PLANNING PERMISSION&nbsp;
+            </td>
+</tr>
+<tr>
+<td class="row1">20 Dec 2005&nbsp;
+            </td><td class="row1">Approved Plan&nbsp;
+            </td><td class="row1"><a href="/WAM/doc/Approved Plan-189993.pdf?extension=.pdf&amp;id=189993&amp;location=Volume3&amp;appid=&amp;contentType=application/pdf&amp;pageCount=1">Whole Doc</a>
+                &nbsp;
+            </td><td class="row1">LOCATION &amp; SITE PLANS&nbsp;
+            </td>
+</tr>
+<tr>
+<td class="row0">20 Dec 2005&nbsp;
+            </td><td class="row0">Approved Plan&nbsp;
+            </td><td class="row0"><a href="/WAM/doc/Approved Plan-189995.pdf?extension=.pdf&amp;id=189995&amp;location=Volume3&amp;appid=&amp;contentType=application/pdf&amp;pageCount=1">Whole Doc</a>
+                &nbsp;
+            </td><td class="row0">PROPOSED ROOFLIGHT INSTALLATION DETAILS&nbsp;
+            </td>
+</tr>
+<tr>
+<td class="row1">20 Dec 2005&nbsp;
+            </td><td class="row1">Approved Plan&nbsp;
+            </td><td class="row1"><a href="/WAM/doc/Approved Plan-189994.pdf?extension=.pdf&amp;id=189994&amp;location=Volume3&amp;appid=&amp;contentType=application/pdf&amp;pageCount=1">Whole Doc</a>
+                &nbsp;
+            </td><td class="row1">SECTIONS &amp; ELEVATIONS&nbsp;
+            </td>
+</tr>
+</table>
+
+
+<!-- #EndLibraryItem --><!-- #EndEditable --> 
+<!-- #BeginEditable "pagefoot" -->
+         <h2>Download Adobe Reader</h2>
+          <p>The images are in Adobe Acrobat format and require <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe
+          Reader</a> to read. Your computer may well already have this installed.</p>
+<!-- #EndEditable --> 
+<!-- #BeginEditable "backbutton" --><!-- #EndEditable --> 
+
+<div id="prefooter">
+	<p>Make a <a href="mailto:dr.developmentcontrol@towerhamlets.gov.uk"><strong>general 
+	comment</strong></a>.</p>
+
+	<h3>Copyright Warning</h3>
+	<p>Plans, drawings and materials submitted to Tower Hamlets Council are 
+	protected by the Copyrights Acts (Section 47, 1988). You may only use 
+	material that is downloaded for consultation purposes. Further copies 
+	must not be made without the prior permission of the copyright owner.</p>
+</div>
+						  <!-- END WAM -->
+						  </div>
+							<div class="footerbarIN"></div>
+						</div>
+					</div>
+
+                    <div id="footerBar"></div>
+				</div>
+			</div>
+			<div id="footer"> 
+            <span class="invisi">[</span>
+            	<div id="footerLinks">&copy; Tower Hamlets | 
+                <a href="http://www.towerhamlets.gov.uk/content_pages/legal_notices.aspx">Legal notices</a> | 
+                <a href="http://www.towerhamlets.gov.uk/lgsl/851-900/853_website_accessibility.aspx">Accessibility</a> | 
+                <a href="http://www.towerhamlets.gov.uk/lgsl/701-750/722_freedom_of_information_adv.aspx">Freedom of information</a> |
+                <a href="http://www.towerhamlets.gov.uk/lgsl/801-850/826_data_protection_act.aspx">Data protection</a> |
+                <a href="http://www.towerhamlets.gov.uk/content_pages/website_problem.aspx">Website problem?</a>
+				</div>
+			</div>
+		</div> <!-- ******* container end ******* -->
+	</div> <!-- ******* all end ******* -->
+	<div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4368103-10']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
