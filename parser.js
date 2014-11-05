@@ -28,38 +28,72 @@ Parser.parseForm = function(formSelector, html) {
 
 Parser.prototype.parse = function(html) {
   var self = this,
-      doc = {},
-      root = undefined;
+      scraperDefinition = this.definition;
   var $ = cheerio.load(html);
 
-  if (typeof(this.definition.preProcess) === 'function') {
-    this.definition.preProcess.call(this, $);
+  var models = [];
+  if (! (scraperDefinition instanceof Array)) {
+    models.push(scraperDefinition);
+  } else {
+    models = scraperDefinition;
+  }
+  
+  var doc = {};
+  models.forEach(function(model) {
+    self._parse(model, $, doc);
+  });
+  return doc;
+};
+
+Parser.prototype._parse = function(model, $, doc) {
+
+  var self = this;
+
+  if (typeof(model.preProcess) === 'function') {
+    model.preProcess.call(this, $);
   }
 
-  if (typeof(this.definition.rootNode) === 'function') {
-    root = this.definition.rootNode.call(this, $);
-  } else if (typeof(this.definition.rootNode) === 'string') {
-    root = $(this.definition.rootNode);
+  var root = undefined;
+  if (typeof(model.rootNode) === 'function') {
+    root = model.rootNode.call(this, $);
+  } else if (typeof(model.rootNode) === 'string') {
+    root = $(model.rootNode);
   }
 
-  if (this.definition.hasMultiple === true)
+  if (model.hasMultiple === true && doc.records === undefined)
     doc.records = [];
 
   if (DEBUG) {
     console.log('root node found: ', root.length === 1);
   }
 
-  $(this.definition.iterator, root).each(function () {
+  var iterator;
+  if (model.iterator) {
+    iterator = $(model.iterator, root);
+  } else {
+    iterator = $(root);
+  }
+
+  iterator.each(function () {
 
       var el = this;
       var match,
           rowDoc = {};
-      self.definition.scraperProperties.forEach(function(scraperProperty) {
+      model.scraperProperties.forEach(function(scraperProperty) {
         match = $(scraperProperty.selector, el);
         if (match.length > 0) {
+
+          if (DEBUG) {
+            console.log('%s matches found for %s', match.length, scraperProperty.key);
+          }
+
           //console.log('match for ' + scraperProperty.selector);
-          if (self.definition.hasMultiple !== true && rowDoc[scraperProperty.key] !== undefined) {
+          if (model.hasMultiple !== true && rowDoc[scraperProperty.key] !== undefined) {
             return;
+          }
+          if (typeof(scraperProperty.selectIndex) === 'number') {
+            //console.log('match', match);
+            match = $(match.get(scraperProperty.selectIndex));
           }
           if (scraperProperty.selector_attr !== undefined) {
             rowDoc[scraperProperty.key] = match.attr(scraperProperty.selector_attr).trim();
@@ -85,14 +119,13 @@ Parser.prototype.parse = function(html) {
         }
       });
 
-    if (self.definition.hasMultiple === true && (Object.keys(rowDoc).length > 0) ) {
+    if (model.hasMultiple === true && (Object.keys(rowDoc).length > 0) ) {
       doc.records.push(rowDoc);
     } else {
       // a little dangerous since it's private
       util._extend(doc, rowDoc);
     }
   });
-  return doc;
 };
 
 module.exports = Parser;
