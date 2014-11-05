@@ -34,3 +34,5 @@ Use the following command to set-up indexes to make sure the database remains fa
 # How to find the GSS code for a borough
 
 http://statistics.data.gov.uk/explore
+or look in mongodb planningauthorities collection
+

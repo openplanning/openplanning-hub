@@ -1,9 +1,12 @@
 {
-  "name": "planning-scraper",
+  "name": "openplanning-hub",
   "version": "0.1.0",
-  "description": "An planning applications scraper",
-  "repository": "https://github.com/andyuk/landtech-tools",
+  "description": "An open central hub for UK planning applications",
+  "repository": "https://github.com/openplanning/openplanning-hub",
   "main": "scraper.js",
+  "bin": {
+    "openplanning" : "bin/openplanning.js"
+  },
   "dependencies": {
     "async": "^0.9.0",
     "cheerio": "^0.17.0",
