@@ -22,6 +22,9 @@ var planningSchema = mongoose.Schema({
     title: String,
     description: String,
     type: String,
+    status: String,
+    decision: String,
+
     // Planning record unqiue ID
     // Some local planning systems will have this in addition to their planning ref.
     local_id: String,
@@ -35,7 +38,6 @@ var planningSchema = mongoose.Schema({
     town: String,
     district: String,
     county: String,
-    postcode: String,
     ward: String,
     parish: String,
     postcode: String,
@@ -47,11 +49,9 @@ var planningSchema = mongoose.Schema({
     date_received: Date,
     date_valid: Date,
     target_date: Date,
-    
-    decision: String,
-    decision_date: Date,
     committee_date: Date,
-
+    decision_date: Date,
+    
     other: { type: mongoose.Schema.Types.Mixed }
 
 }, { collection: 'planning', autoIndex: true });
